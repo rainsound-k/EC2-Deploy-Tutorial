@@ -119,7 +119,7 @@ RAVEN_CONFIG = {
     'dsn': 'https://edc2f1749b0c45c9888495e63b831a4c:b98df8075bd04fb69b56d80a2f538b86@sentry.io/1195792',
     # If you are using git, you can also automatically configure the
     # release based on the git info.
-    'release': raven.fetch_git_sha(os.path.abspath(os.pardir)),
+    'release': raven.fetch_git_sha(ROOT_DIR),
 }
 
 # Internationalization
