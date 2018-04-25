@@ -35,11 +35,11 @@ secrets_base = json.loads(open(SECRETS_BASE, 'rt').read())
 SECRET_KEY = secrets_base['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    # '.amazonaws.com',
+    '.amazonaws.com',
 ]
 
 # Application definition
