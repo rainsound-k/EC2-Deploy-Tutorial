@@ -31,6 +31,7 @@ SECRETS_DIR = os.path.join(ROOT_DIR, '.secrets')
 SECRETS_BASE = os.path.join(SECRETS_DIR, 'base.json')
 SECRETS_LOCAL = os.path.join(SECRETS_DIR, 'local.json')
 SECRETS_DEV = os.path.join(SECRETS_DIR, 'dev.json')
+SECRETS_PRODUCTION = os.path.join(SECRETS_DIR, 'production.json')
 secrets_base = json.loads(open(SECRETS_BASE, 'rt').read())
 
 SECRET_KEY = secrets_base['SECRET_KEY']
@@ -98,9 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 RAVEN_CONFIG = {
-    'dsn': 'https://edc2f1749b0c45c9888495e63b831a4c:b98df8075bd04fb69b56d80a2f538b86@sentry.io/1195792',
-    # If you are using git, you can also automatically configure the
-    # release based on the git info.
+    'dsn': secrets_base['RAVEN_DSN'],
     'release': raven.fetch_git_sha(os.path.abspath(os.pardir)),
 }
 

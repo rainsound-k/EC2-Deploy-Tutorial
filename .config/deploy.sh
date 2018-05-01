@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export DJANGO_SETTINGS_MODULE=config.settings.dev
+export DJANGO_SETTINGS_MODULE=config.settings.production
 sudo rm -rf /etc/nginx/sites-enabled/*
 sudo cp -f /srv/ec2-deploy/.config/nginx-app.conf /etc/nginx/sites-available/nginx-app.conf
 sudo ln -sf /etc/nginx/sites-available/nginx-app.conf /etc/nginx/sites-enabled/nginx-app.conf

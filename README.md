@@ -54,7 +54,7 @@ pip install -r requirements.txt
       "NAME": "<DB name>",
       "USER": "<DB username>",
       "PASSWORD": "<DB user password>",
-      "PORT": <Port number, default:5432>
+      "PORT": "<Port number, default:5432>"
     }
   }
 }
@@ -71,7 +71,7 @@ pip install -r requirements.txt
       "NAME": "<DB name>",
       "USER": "<DB username>",
       "PASSWORD": "<DB user password>",
-      "PORT": <Port number, default:5432>
+      "PORT": "<Port number, default:5432>"
     }
   }
 }
@@ -88,7 +88,7 @@ pip install -r requirements.txt
       "NAME": "<DB name>",
       "USER": "<DB username>",
       "PASSWORD": "<DB user password>",
-      "PORT": <Port number, default:5432>
+      "PORT": "<Port number, default:5432>"
     }
   }
 }
