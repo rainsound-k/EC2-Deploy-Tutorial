@@ -36,6 +36,15 @@ secrets_base = json.loads(open(SECRETS_BASE, 'rt').read())
 
 SECRET_KEY = secrets_base['SECRET_KEY']
 
+# AWS
+AWS_ACCESS_KEY_ID = secrets_base['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = secrets_base['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = secrets_base['AWS_STORAGE_BUCKET_NAME']
+
+AWS_DEFAULT_ACL = 'private'
+AWS_S3_REGION_NAME = 'ap-northeast-2'
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'raven.contrib.django.raven_compat',
+    'storages',
 
     'photos',
 
@@ -77,8 +87,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'config.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
